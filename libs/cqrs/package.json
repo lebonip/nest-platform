@@ -1,0 +1,30 @@
+{
+  "name": "@lebonip/nest-cqrs",
+  "version": "1.2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lebonip/nest-platform.git"
+  },
+  "author": "https://github.com/mathiasjoseph",
+  "homepage": "https://github.com/lebonip/nest-platform#readme",
+  "dependencies": {
+    "class-transformer": "^0.3.2",
+    "class-validator": "^0.13.1",
+    "kafkajs": "^1.15.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^7.6.11",
+    "@nestjs/core": "^7.6.11"
+  },
+  "devDependencies": {
+    "@types/reflect-metadata": "^0.1.0"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "node",
+    "typescript",
+    "kafka",
+    "cqrs"
+  ]
+}

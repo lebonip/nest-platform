@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "projects": {
+    "cqrs": {
+      "root": "libs/cqrs",
+      "sourceRoot": "libs/cqrs/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cqrs/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/cqrs"
+          ],
+          "options": {
+            "jestConfig": "libs/cqrs/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/cqrs",
+            "tsConfig": "libs/cqrs/tsconfig.lib.json",
+            "packageJson": "libs/cqrs/package.json",
+            "main": "libs/cqrs/src/index.ts",
+            "assets": [
+              "libs/cqrs/*.md"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  }
+}
